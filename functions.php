@@ -1,6 +1,7 @@
 <?php
 
 include 'inc/functions-global.php';
+include 'inc/functions-admin.php';
 include 'inc/functions-metaboxes.php';
 
 add_theme_support('post-thumbnails', array('post', 'page'));
@@ -11,6 +12,8 @@ add_action('wp_enqueue_scripts', 'bc_scripts');
 add_action('widgets_init', 'bc_footer_widgets_init');
 add_action('init', 'meta_boxes');
 add_action('after_setup_theme', 'register_bc_menu');
+add_action( 'admin_menu', 'hp_settings' );
+add_action( 'admin_init', 'hp_settings_data' );
 
 add_filter('excerpt_more', 'new_excerpt_more');
 add_filter('wp_title', 'bc_wp_title', 10, 2);

@@ -202,6 +202,30 @@ footer a {
 }
 
 /**
+ * Home
+ * ----------------------------------------------------------------------------
+ */
+
+.carousel {
+	width: 100%;
+	height: 480px;
+}
+.carousel .item {
+	background-size: cover;
+	background-position: center top;
+	width: 100%;
+	height: 480px;
+}
+.home-header-banner, .home-footer-banner {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 480px;
+}
+
+/**
  * Index
  * ----------------------------------------------------------------------------
  */

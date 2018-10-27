@@ -75,3 +75,12 @@ function bc_footer_widgets_init() {
 function posts_link_attributes() {
     return 'class="btn btn-default" role="button"';
 }
+
+function get_slider_img($i) {
+    $img = get_option($i);
+    if ($img) {
+        return esc_attr($img);
+    } else {
+        return 'https://via.placeholder.com/1600x600?text='.$i;
+    }
+}
