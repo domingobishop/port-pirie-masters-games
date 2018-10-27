@@ -1,7 +1,9 @@
 <div class="sponsors">
   <div class="container">
-    <div class="row">
-      
+    <div class="row text-center">
+        <p>
+            <a href="<?php echo get_option('reg_btn'); ?>" type="button" class="btn btn-primary">Register now</a>
+        </p>
     </div>
   </div>
 </div>
@@ -25,9 +27,15 @@
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <h4>Port Pirie Masters Games 2018</h4>
         <p>
-          <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-          <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+          <a href="<?php echo get_option('hp_facebook'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+          <a href="<?php echo get_option('hp_twitter'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
         </p>
+          <p>
+              <?php echo get_option('hp_address_1'); ?><br>
+              <?php echo get_option('hp_address_2'); ?><br>
+              <?php echo get_option('hp_tel'); ?><br>
+              <a href="mailto:<?php echo get_option('hp_email'); ?>">Email us</a>
+          </p>
         <p><small>Copyright © <?php echo date("Y"); ?> <br>
             Website by <a href="http://creatistic.com.au/" target="_blank">Creatistic</a></small></p>
       </div>

@@ -20,20 +20,20 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <a href="<?php bloginfo('siteurl'); ?>/"
+                <a href="<?php echo home_url(); ?>"
                    title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="branding">
                     <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
                 </a>
             </div>
-            <div class="col-sm-3 text-right">
+            <div class="col-sm-4 text-right">
                 <p>
-                    <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-                    <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+                    <a href="<?php echo get_option('hp_facebook'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+                    <a href="<?php echo get_option('hp_twitter'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
                 </p>
             </div>
-            <div class="col-sm-3 text-right">
+            <div class="col-sm-2 text-right">
                 <p>
-                    <a href="#" type="button" class="btn btn-primary">Register now</a>
+                    <a href="<?php echo get_option('reg_btn'); ?>" type="button" class="btn btn-primary">Register now</a>
                 </p>
             </div>
         </div>
