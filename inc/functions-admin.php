@@ -5,10 +5,11 @@
  */
 
 function hp_settings() {
-    add_menu_page('Port Pirie Masters Games theme settings', 'Port Pirie Masters Games', 'administrator', 'ppmg-settings', 'hp_settings_page', 'dashicons-admin-generic', 21);
+    add_menu_page('Port Pirie Masters Games settings', 'Port Pirie Masters Games', 'administrator', 'ppmg-settings', 'hp_settings_page', 'dashicons-admin-generic', 21);
 }
 
 function hp_settings_data() {
+    register_setting('hp_settings_group', 'reg_btn');
     register_setting('hp_settings_group', 'hp_facebook');
     register_setting('hp_settings_group', 'hp_twitter');
     register_setting('hp_settings_group', 'hp_address_1');
@@ -37,11 +38,19 @@ function hp_settings_page()
         }
     </style>
     <div class="hp-admin wrap">
-        <h1>Theme settings</h1>
+        <h1>Port Pirie Masters Games settings</h1>
 
         <form method="post" action="options.php" novalidate="novalidate">
             <?php settings_fields( 'hp_settings_group' ); ?>
             <?php do_settings_sections( 'hp_settings_group' ); ?>
+            <table class="form-table">
+                <h3>Registration</h3>
+                <tr valign="top">
+                    <th scope="row"><label for="reg_btn">Registration button link</label></th>
+                    <td><input type="text" name="reg_btn" value="<?php echo esc_attr( get_option('reg_btn') ); ?>" /></td>
+                </tr>
+            </table>
+            <?php submit_button(); ?>
             <table class="form-table">
                 <h3>Contact details</h3>
                 <tr valign="top">
