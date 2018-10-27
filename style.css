@@ -281,15 +281,20 @@ footer a {
 .content-area {
 	margin: 3em 0;
 }
-.table h3, .sports-details h3 {
-	margin: 0.6em 0;
+.sports-heading h3 {
+	margin: 0.3em 0;
+	font-size: 18px;
+	font-weight: 700;
 }
 .sports-heading {
-	padding: 8px;
-	background-color: #f9f9f9;
+	padding: 8px 16px;
+	background-color: #eee;
 }
 .sports-entry {
-	padding: 8px;
+	padding: 8px 0;
+}
+.google-map iframe {
+	max-width: 100% !important;
 }
 
 /**
