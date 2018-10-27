@@ -169,7 +169,7 @@ body {
 }
 .major-sponsors {
 	padding: 1em;
-	background-color: #eee;
+	border-top: 5px solid #ccc;
 }
 .major-sponsors h3 {
 	margin: 1em 0;
