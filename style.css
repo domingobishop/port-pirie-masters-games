@@ -123,17 +123,7 @@ body {
 	display: inline-block;
 	float: right;
 }
-#countdown > div {
-	background: #cbd501;
-	padding: 5px 15px;
-	margin: 0 2px;
-	display: inline-block;
-	text-align: center;
-}
-#countdown .begin {
-	padding-top: 19.5px;
-	padding-bottom: 19.5px;
-}
+
 .btn-primary {
 	border-color: transparent;
 	background: #0094ca; /* Old browsers */
@@ -212,15 +202,26 @@ footer a {
 }
 
 /**
- * Home
+ * Index
  * ----------------------------------------------------------------------------
  */
 
-.home .entry-content p:first-child strong {
-	font-size: 1.4em;
+.post-loop .post-item {
+	border-top: 1px dotted #ccc;
+	padding-top: 1em;
+	margin-bottom: 1.6em;
 }
-.tagline-logo {
-	width: 100%;
+.post-loop .post-item h2 {
+	margin: 0 0 1em 0;
+}
+.paged-posts {
+	margin: 1.6em 0;
+}
+.paged-posts .next {
+	float: right;
+}
+.paged-posts .previous {
+	float: left;
 }
 
 /**
