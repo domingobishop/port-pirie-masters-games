@@ -20,6 +20,8 @@ function hp_settings_data() {
     register_setting('hp_settings_group', 'slider_img_1');
     register_setting('hp_settings_group', 'slider_img_2');
     register_setting('hp_settings_group', 'slider_img_3');
+
+    register_setting('hp_settings_group', 'sponsors');
 }
 
 function hp_settings_page()
@@ -33,7 +35,7 @@ function hp_settings_page()
         }
         .hp-admin textarea {
             width: 100%;
-            max-width: 320px;
+            max-width: 100%;
             height: 12em;
         }
     </style>
@@ -96,6 +98,16 @@ function hp_settings_page()
                     <th scope="row"><label for="slider_img_3">Slider image 3</label></th>
                     <td><input type="text" name="slider_img_3" value="<?php echo esc_attr( get_option('slider_img_3') ); ?>" /></td>
                     <td>Image size 1600px x 750px</td>
+                </tr>
+            </table>
+            <?php submit_button(); ?>
+            <table class="form-table">
+                <h3>Sponsors</h3>
+                <tr valign="top">
+                    <th scope="row"><label for="sponsors">Sponsor logos</label></th>
+                    <td><?php
+                        wp_editor( get_option('sponsors'), 'sponsors' );
+                        ?></td>
                 </tr>
             </table>
             <?php submit_button(); ?>

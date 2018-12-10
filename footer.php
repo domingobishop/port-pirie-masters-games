@@ -10,8 +10,13 @@
 <div class="major-sponsors">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <h3>Major Sponsors</h3>
+      <div class="col-sm-12 text-center">
+        <h3>Sponsors</h3>
+          <div class="sponsor-logos">
+          <?php
+          echo get_option('sponsors');
+          ?>
+          </div>
       </div>
     </div>
   </div>
