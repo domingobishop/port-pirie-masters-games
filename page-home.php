@@ -32,10 +32,11 @@ get_header(); ?>
                             <?php
                             $category_id = get_cat_ID('sport');
                             $args = array(
-                                'category' => $category_id,
-                                'post_type'   => 'page',
-                                'order'          => 'ASC',
-                                'orderby'        => 'title'
+                                'category'  => $category_id,
+                                'post_type' => 'page',
+                                'order'     => 'ASC',
+                                'orderby'   => 'title',
+                                'numberposts' => -1
                             );
                             $sports = get_posts( $args );
                             foreach ( $sports as $sport ) {
