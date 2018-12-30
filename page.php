@@ -32,7 +32,7 @@
                     <div class="<?php echo $col_class ?>">
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                             <div class="sports-heading">
-                                <h3>General information</h3>
+                                <h3><?php the_title(); ?></h3>
                             </div>
                             <div class="sports-entry">
                                 <?php the_content(); ?>
