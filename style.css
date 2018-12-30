@@ -229,6 +229,15 @@ footer a {
 	width: 100%;
 	height: 480px;
 }
+.sports ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.sports ul li {
+	margin: 0.5em;
+	display: inline-block;
+}
 
 /**
  * Index

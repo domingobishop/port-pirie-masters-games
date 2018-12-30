@@ -32,8 +32,12 @@
       <div class="col-lg-8 col-lg-offset-2 text-center">
         <h4>Port Pirie Masters Games 2018</h4>
         <p>
-          <a href="<?php echo get_option('hp_facebook'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-          <a href="<?php echo get_option('hp_twitter'); ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+            <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
+                <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+            <?php } ?>
+            <?php if ( $hp_twitter = get_option('hp_twitter') ) { ?>
+                <a href="<?php echo $hp_twitter; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+            <?php } ?>
         </p>
           <p>
               <?php echo get_option('hp_address_1'); ?><br>

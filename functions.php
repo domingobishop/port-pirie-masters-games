@@ -29,3 +29,9 @@ function wpse_setup_theme() {
 }
 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );
+
+function add_cats_to_pages() {
+    register_taxonomy_for_object_type('category', 'page');
+}
+
+add_action( 'init', 'add_cats_to_pages' );
