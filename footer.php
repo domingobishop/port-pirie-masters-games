@@ -29,7 +29,7 @@
     <?php } ?>
     <div class="row bc-info">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h4>Port Pirie Masters Games 2018</h4>
+        <h4><?php echo esc_attr(get_bloginfo('name', 'display')); ?></h4>
         <p>
             <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
                 <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>

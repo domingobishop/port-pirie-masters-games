@@ -16,6 +16,21 @@
 </head>
 
 <body <?php body_class(); ?>>
+<div class="social-bar">
+    <div class="container">
+        <div class="col-sm-12 text-right">
+            <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
+                <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook-square.png"></a>
+            <?php } ?>
+            <?php if ( $hp_twitter = get_option('hp_twitter') ) { ?>
+                <a href="<?php echo $hp_twitter; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter-square.png"></a>
+            <?php } ?>
+            <?php if ( $hp_email = get_option('hp_email') ) { ?>
+                <a href="mailto:<?php echo $hp_email; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/envelope-square.png"></a>
+            <?php } ?>
+        </div>
+    </div>
+</div>
 <div class="branding-banner">
     <div class="container-fluid">
         <div class="row">
@@ -27,12 +42,7 @@
             </div>
             <div class="col-sm-4 text-right">
                 <p>
-                    <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
-                    <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-                    <?php } ?>
-                    <?php if ( $hp_twitter = get_option('hp_twitter') ) { ?>
-                    <a href="<?php echo $hp_twitter; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
-                    <?php } ?>
+
                 </p>
             </div>
             <div class="col-sm-2 text-right">

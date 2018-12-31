@@ -27,7 +27,7 @@ get_header(); ?>
             <div class="content clearfix">
                 <article>
                     <div class="row">
-                        <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="col-md-12 text-center">
                             <ul>
                             <?php
                             $category_id = get_cat_ID('sport');

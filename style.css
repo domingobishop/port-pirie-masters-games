@@ -156,7 +156,10 @@ body {
 .branding-banner p {
 	margin: 0.7em 0;
 }
-
+.social-bar {
+	background: #003366;
+	padding: 0.2em;
+}
 @media (max-width: 576px) {
 	.text-right {
 		text-align: center !important;
