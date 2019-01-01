@@ -11,11 +11,13 @@ $('.navbar-collapse ul li a').click(function() {
 // Removes fixed width from .wp-caption div for images
 $(".wp-caption").removeAttr('style');
 
-CountDownTimer('03/24/2017 9:00 AM', 'countdown');
+CountDownTimer('04/05/2019 9:00 AM', 'countdown');
 
 function CountDownTimer(dt, id)
 {
     var end = new Date(dt);
+
+
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -26,6 +28,7 @@ function CountDownTimer(dt, id)
     function showRemaining() {
         var now = new Date();
         var distance = end - now;
+
         if (distance < 0) {
 
             clearInterval(timer);
