@@ -1,15 +1,21 @@
 <div class="sponsors">
   <div class="container">
-    <div class="row">
-      
+    <div class="row text-center">
+        <p>
+            <a href="<?php echo get_option('reg_btn'); ?>" type="button" class="btn btn-primary">Register now</a>
+        </p>
     </div>
   </div>
 </div>
 <div class="major-sponsors">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
-        <h3>Major Sponsors</h3>
+      <div class="col-sm-12 text-center">
+          <div class="sponsor-logos">
+          <?php
+          echo get_option('sponsors');
+          ?>
+          </div>
       </div>
     </div>
   </div>
@@ -23,11 +29,21 @@
     <?php } ?>
     <div class="row bc-info">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h4>Port Pirie Masters Games 2018</h4>
+        <h4><?php echo esc_attr(get_bloginfo('name', 'display')); ?></h4>
         <p>
-          <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-          <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+            <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
+                <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+            <?php } ?>
+            <?php if ( $hp_twitter = get_option('hp_twitter') ) { ?>
+                <a href="<?php echo $hp_twitter; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+            <?php } ?>
         </p>
+          <p>
+              <?php echo get_option('hp_address_1'); ?><br>
+              <?php echo get_option('hp_address_2'); ?><br>
+              <?php echo get_option('hp_tel'); ?><br>
+              <a href="mailto:<?php echo get_option('hp_email'); ?>">Email us</a>
+          </p>
         <p><small>Copyright © <?php echo date("Y"); ?> <br>
             Website by <a href="http://creatistic.com.au/" target="_blank">Creatistic</a></small></p>
       </div>

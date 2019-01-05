@@ -11,6 +11,27 @@ function meta_boxes() {
             'priority' => 'high',
             'fields' => array(
                 array(
+                    'name' => 'Dates/times',
+                    'desc' => '',
+                    'id' => 'dates',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Age groups',
+                    'desc' => '',
+                    'id' => 'age',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
+                    'name' => 'Gender',
+                    'desc' => '',
+                    'id' => 'gender',
+                    'type' => 'text',
+                    'std' => ''
+                ),
+                array(
                     'name' => 'Map',
                     'desc' => 'Add your Google map embed code here',
                     'id' => 'google-map',
@@ -72,7 +93,6 @@ class create_meta_box {
                     '<br />', $field['desc'];
                     break;
                 case 'textarea':
-                    $field_value = get_post_meta( $post->ID, $field['id'], false );
                     $args = array (
                         'media_buttons' => false,
                         'textarea_rows' => 4,
@@ -80,7 +100,7 @@ class create_meta_box {
                         'quicktags' => array( 'buttons' => 'strong,em,ul,ol,li,link' ),
                         'wpautop' => false
                     );
-                    wp_editor( $field_value[0], $field['id'], $args );
+                    wp_editor( $meta, $field['id'], $args );
                     // echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>',
                     echo '<br />', $field['desc'];
                     break;

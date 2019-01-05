@@ -27,16 +27,18 @@ html, button, input, select, textarea {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif, sansserif;
-	color: #000;
+	font-weight: 700;
+	color: #003366;
 }
 a {
-	color: #000;
+	color: #003366;
 }
 p a {
-	font-weight: 600;
+	text-decoration: underline;
 }
 a:hover, a:focus {
 	color: #000;
+	text-decoration: none;
 }
 table {
 	border-collapse: collapse;
@@ -105,6 +107,7 @@ body {
 	color: #fff;
 	padding-left: 9px;
 	padding-right: 9px;
+	text-decoration: none;
 }
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
 	color: #cbd501;
@@ -123,17 +126,7 @@ body {
 	display: inline-block;
 	float: right;
 }
-#countdown > div {
-	background: #cbd501;
-	padding: 5px 15px;
-	margin: 0 2px;
-	display: inline-block;
-	text-align: center;
-}
-#countdown .begin {
-	padding-top: 19.5px;
-	padding-bottom: 19.5px;
-}
+
 .btn-primary {
 	border-color: transparent;
 	background: #0094ca; /* Old browsers */
@@ -146,28 +139,42 @@ body {
 	border-color: #0094ca;
 	background: #00ccff;
 }
+#countdown {
+	padding: 0 15px;
+	display: inline-block;
+	float: right;
+}
+#countdown > div {
+	background: #cbd501;
+	padding: 5px 15px;
+	margin: 0 2px;
+	display: inline-block;
+	text-align: center;
+}
+#countdown .begin {
+	padding-top: 19.5px;
+	padding-bottom: 19.5px;
+}
 
 /**
  * Header
  * ----------------------------------------------------------------------------
  */
 
-.bc-banner h3 {
-	font-family: 'Waiting for the Sunrise', cursive;
+.branding {
 	font-size: 2.4em;
-
+	font-weight: 700;
+	text-decoration: none;
 }
-@media (max-width: 768px) {
-	#countdown {
-		display: none;
-	}
-	.banner-header .page-header h1 {
-		text-align: center;
-		padding: 0;
-	}
-	.banner-header .page-header {
-		position: relative;
-	}
+.branding-banner  {
+	padding: 1.5em 0;
+}
+.branding-banner p {
+	margin: 0.7em 0;
+}
+.social-bar {
+	background: #003366;
+	padding: 0.2em;
 }
 @media (max-width: 576px) {
 	.text-right {
@@ -182,12 +189,11 @@ body {
 
 .sponsors {
 	border-top: 1px solid #ccc;
-	margin-top: 1em;
 	padding: 1.6em;
 }
 .major-sponsors {
 	padding: 1em;
-	background-color: #eee;
+	border-top: 5px solid #ccc;
 }
 .major-sponsors h3 {
 	margin: 1em 0;
@@ -201,6 +207,9 @@ body {
 }
 .major-sponsors-wrapper img {
 	margin-bottom: 1em;
+}
+.sponsor-logos img {
+	margin: 1.2em;
 }
 footer {
 	padding: 1em 0;
@@ -224,11 +233,63 @@ footer a {
  * ----------------------------------------------------------------------------
  */
 
-.home .entry-content p:first-child strong {
-	font-size: 1.4em;
-}
-.tagline-logo {
+.carousel {
 	width: 100%;
+	height: 480px;
+}
+.carousel .item {
+	background-size: cover;
+	background-position: center center;
+	width: 100%;
+	height: 480px;
+}
+.home-header-banner {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 480px;
+	margin-bottom: 1.6em;
+}
+.home .main {
+	margin-bottom: 1.6em;
+}
+.sports {
+	background: #eee;
+	padding: 1.6em;
+}
+.sports ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.sports ul li {
+	margin: 0.5em;
+	display: inline-block;
+}
+
+/**
+ * Index
+ * ----------------------------------------------------------------------------
+ */
+
+.post-loop .post-item {
+	border-top: 1px dotted #ccc;
+	padding-top: 1em;
+	margin-bottom: 1.6em;
+}
+.post-loop .post-item h2 {
+	margin: 0 0 1em 0;
+}
+.paged-posts {
+	margin: 1.6em 0;
+}
+.paged-posts .next {
+	float: right;
+}
+.paged-posts .previous {
+	float: left;
 }
 
 /**
@@ -264,15 +325,20 @@ footer a {
 .content-area {
 	margin: 3em 0;
 }
-.table h3, .sports-details h3 {
-	margin: 0.6em 0;
+.sports-heading h3 {
+	margin: 0.3em 0;
+	font-size: 18px;
+	font-weight: 700;
 }
 .sports-heading {
-	padding: 8px;
-	background-color: #f9f9f9;
+	padding: 8px 11px;
+	background-color: #eee;
 }
 .sports-entry {
-	padding: 8px;
+	padding: 8px 0;
+}
+.google-map iframe {
+	max-width: 100% !important;
 }
 
 /**

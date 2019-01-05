@@ -27,7 +27,7 @@ function register_bc_menu() {
 // Replaces the excerpt "more" text by a link
 function new_excerpt_more($more) {
     global $post;
-    return '<br><a class="btn btn-default btn-xs" role="button" href="'. get_permalink($post->ID) . '">Read&nbsp;more&nbsp;&raquo;</a>';
+    return '... <a href="'. get_permalink($post->ID) . '">Read&nbsp;more&nbsp;&raquo;</a>';
 }
 
 function bc_wp_title( $title, $sep ) {
@@ -70,4 +70,17 @@ function bc_footer_widgets_init() {
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
+}
+
+function posts_link_attributes() {
+    return 'class="btn btn-default" role="button"';
+}
+
+function get_slider_img($i) {
+    $img = get_option($i);
+    if ($img) {
+        return esc_attr($img);
+    } else {
+        return 'https://via.placeholder.com/1600x600?text='.$i;
+    }
 }

@@ -16,22 +16,28 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="bc-banner">
+<div class="branding-banner">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <a href="<?php bloginfo('siteurl'); ?>/"
-                   title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php bloginfo('name'); ?>" class="img-responsive">
+                <a href="<?php echo home_url(); ?>"
+                   title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="branding">
+                    <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
                 </a>
             </div>
-            <div class="col-sm-6 text-right">
+            <div class="col-sm-4 text-right">
                 <p>
-                    <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
-                    <a href="#" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+                    <?php if ( $hp_facebook = get_option('hp_facebook') ) { ?>
+                        <a href="<?php echo $hp_facebook; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+                    <?php } ?>
+                    <?php if ( $hp_twitter = get_option('hp_twitter') ) { ?>
+                        <a href="<?php echo $hp_twitter; ?>" target="_blank"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+                    <?php } ?>
                 </p>
+            </div>
+            <div class="col-sm-2 text-right">
                 <p>
-                    <a href="#" type="button" class="btn btn-primary">Register now</a>
+                    <a href="<?php echo get_option('reg_btn'); ?>" type="button" class="btn btn-primary">Register now</a>
                 </p>
             </div>
         </div>
@@ -55,7 +61,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <?php wp_nav_menu(array('menu' => 'primary', 'items_wrap' => '<ul class="nav navbar-nav" role="menu">%3$s</ul>', 'container' => false)); ?>
-                <div id="countdown"></div>
+                <ul id="countdown" class="nav navbar-nav navbar-right">
+
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
