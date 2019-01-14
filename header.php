@@ -22,7 +22,7 @@
             <div class="col-sm-6">
                 <a href="<?php echo home_url(); ?>"
                    title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" class="branding">
-                    <?php echo esc_attr(get_bloginfo('name', 'display')); ?>
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/logo.png">
                 </a>
             </div>
             <div class="col-sm-4 text-right">
